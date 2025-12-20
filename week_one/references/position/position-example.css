@@ -1,0 +1,68 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    width: 220px;
+    height: 60px;
+    margin: 16px 0;
+    padding: 12px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    align-content: center;
+    opacity: 0.7;
+}
+
+.static {
+    background: #6c757d;
+}
+
+.relative {
+    background: #007bff;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.absolute {
+    background: #28a745;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+.fixed {
+    background: #dc3545;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.sticky {
+    background: #ffc107;
+    color: #333;
+    position: sticky;
+    top: 10px;
+}
+
+.absolute-box {
+    position: relative;
+    height: 200px;
+    background-color: #ddd;
+}
+
+.fixed-box {
+    height: 200px;
+}
+
+.sticky-box {
+    background: #ddd;
+    height: 300px;
+}
+
+.scroll {
+    height: 900px;
+}
