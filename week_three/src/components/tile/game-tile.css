@@ -1,0 +1,48 @@
+.tile {
+    width: 80px;
+    height: 80px;
+    border-radius: 15%;
+    border-width: 0px;
+}
+
+.matched {
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(16, 252, 103);
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: rgb(3, 97, 3);
+}
+
+.blue {
+    background-color: blue;
+}
+
+.indigo {
+    background-color: indigo;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.turquoise {
+    background-color: turquoise;
+}
+
+.card-back {
+    background-color: rgb(180, 180, 180);
+}

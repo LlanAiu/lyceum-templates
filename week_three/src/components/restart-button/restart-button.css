@@ -1,0 +1,13 @@
+.restart {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border-width: 0px;
+    background-color: rgb(104, 190, 252);
+    font-family: inherit;
+}
+
+.restart:hover {
+    background-color: rgb(31, 120, 185);
+    color: white;
+}

@@ -3,6 +3,8 @@
 // external
 
 // internal
+import "./restart-button.css";
+
 
 interface RestartButtonProps {
     restart: () => void;
@@ -11,7 +13,7 @@ interface RestartButtonProps {
 export default function RestartButton({ restart }: RestartButtonProps) {
     return (
         <button
-            className="mt-4 px-3 py-2 rounded-md bg-blue-100 hover:bg-blue-300"
+            className="restart"
             type="button"
             onClick={restart}
         >

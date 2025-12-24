@@ -3,7 +3,8 @@
 // external
 
 // internal
-import type { Tile } from "../lib/types";
+import "./game-tile.css";
+import type { Tile } from "../../lib/types";
 
 
 interface GameTileProps {
@@ -12,11 +13,11 @@ interface GameTileProps {
 }
 
 export default function GameTile({ tile, onClick }: GameTileProps) {
-    const color = (tile.revealed) ? tile.color : "bg-slate-400";
-    const matched = (tile.matched) ? "border-2 border-green-600" : "";
+    const color = (tile.revealed) ? tile.color : "card-back";
+    const matched = (tile.matched) ? "matched" : "";
 
     return (
-        <button type="button" className={`w-20 h-20 rounded-md ${color} ${matched}`} onClick={onClick}>
+        <button type="button" className={`tile ${color} ${matched}`} onClick={onClick}>
         </button>
     );
 }
