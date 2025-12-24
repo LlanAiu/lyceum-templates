@@ -1,0 +1,46 @@
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.indigo {
+    background-color: indigo;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.turquoise {
+    background-color: turquoise;
+}
+
+.game-container {
+    max-width: max-content;
+    margin: 4rem auto 0 auto;
+    text-align: center;
+    background-color: #e2e8f0;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+.game-header {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
