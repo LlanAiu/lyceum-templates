@@ -26,3 +26,7 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
+
+# Environment files
+.env
+.env.*
