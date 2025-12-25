@@ -22,10 +22,6 @@ export default function RandomPoemPage() {
 
     // TODO: finish this component
     return (
-        <div>
-            <p>{poem.title}</p>
-            <p>{poem.text}</p>
-            <p>{poem.author}</p>
-        </div>
-    )
+        <div></div>
+    );
 }

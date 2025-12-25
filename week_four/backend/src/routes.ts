@@ -4,15 +4,15 @@
 import type { FastifyInstance } from "fastify";
 
 // internal
-import { handleGetRandomPoem } from "./handlers/random-poem-handler.js";
-import type { Poem, PoemReply } from "./globals/types.js";
 
 
 export function setupRoutes(server: FastifyInstance) {
     server.get<{
-        Reply: PoemReply;
-    }>("/random", async (_req, res) => {
-        const reply = await handleGetRandomPoem();
-        res.status(200).send(reply);
+        /*TODO: mark the typing on this route as
+         * Reply: <TYPE>;
+         */
+    }>("" /* NAME THE ROUTE */, async (_req, res) => {
+        // TODO: call the route handler and return the data
+
     })
 }
