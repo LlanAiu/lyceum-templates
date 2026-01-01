@@ -8,24 +8,16 @@ import type { RelevanceRanking } from "../relevance.js";
 // internal
 
 
+// In case you need it -- usually you don't though for testing
 const FAKE_ENV = process.env.FAKE_ENV;
 if (!FAKE_ENV) throw new Error("Environment variable FAKE_ENV is not set!");
 
 export class TestRanking implements RelevanceRanking {
+
+    // TODO: just return a shuffled list of the input poems array
     async rankByRelevance(poems: Poem[], _query: string): Promise<Process<Poem[]>> {
-        const shuffled = shuffle(poems);
 
-        return { success: true, data: shuffled };
+        throw new Error("TODO!");
     }
 }
 
-
-function shuffle(poems: Poem[]): Poem[] {
-    const shuffled = [...poems];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-}

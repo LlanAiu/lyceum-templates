@@ -10,17 +10,17 @@ import { PoemType } from "../../globals/types.js";
 
 
 describe("poem recommendation handler tests", () => {
+
+    // As you may expect, this runs before each test
+    // Other helpful functions you may want to look at: afterAll, beforeAll, afterEach
     beforeEach(() => {
         database.clear();
     });
 
     it("doesn't break if database is empty", async () => {
         const input = {
-            type: PoemType.Elegy,
-            searchQuery: "b",
-            minLines: 2,
-            maxLines: 4,
-            maxPoems: 1,
+            type: PoemType.Ballad,
+            searchQuery: "",
         };
 
         const result = await handleRecommendPoem(input);
@@ -28,35 +28,5 @@ describe("poem recommendation handler tests", () => {
         expect(result.success).toBe(true);
     })
 
-    it("returns poems filtered by minLines and maxLines, ranked, and limited", async () => {
-        database.addPoem({ title: "A", author: "A", lines: ["a", "b"], type: PoemType.Elegy });
-        database.addPoem({ title: "B", author: "B", lines: ["a", "b", "c", "d"], type: PoemType.Elegy });
-        database.addPoem({ title: "C", author: "C", lines: ["a"], type: PoemType.Ballad });
-
-        const input = {
-            type: PoemType.Elegy,
-            searchQuery: "b",
-            minLines: 2,
-            maxLines: 4,
-            maxPoems: 1,
-        };
-
-        const result = await handleRecommendPoem(input);
-        expect(result.success).toBe(true);
-        if (result.success) {
-            expect(result.data.length).toBe(1);
-            expect(["A", "B"]).toContain(result.data[0].title);
-        }
-    });
-
-    it("returns all ranked poems if no maxPoems", async () => {
-        database.addPoem({ title: "A", author: "A", lines: ["a", "b"], type: PoemType.Limerick });
-        database.addPoem({ title: "B", author: "B", lines: ["a", "b", "c", "d"], type: PoemType.Limerick });
-        const result = await handleRecommendPoem({ type: PoemType.Limerick, searchQuery: "a" });
-        expect(result.success).toBe(true);
-        if (result.success) {
-            expect(Array.isArray(result.data)).toBe(true);
-            expect(result.data.length).toBeGreaterThan(0);
-        }
-    });
+    // TODO: Write the rest of your tests here
 });

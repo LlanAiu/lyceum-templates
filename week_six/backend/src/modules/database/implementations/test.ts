@@ -8,33 +8,23 @@ import type { Database } from "../database.js";
 // internal
 
 
+/* TODO: finish up this in-memory implementation of a poem database 
+ * (basically, just store them in the array)
+ */
 export class TestDatabase implements Database {
     private poems: Poem[] = [];
 
+
     async addPoem(poem: Poem): Promise<Task> {
-        try {
-            this.poems.push(poem);
-            return { success: true, data: undefined };
-        } catch (error) {
-            return { success: false, error: error instanceof Error ? error : new Error(String(error)) };
-        }
+        throw new Error("TODO");
     }
 
     async getAllPoems(): Promise<Process<Poem[]>> {
-        try {
-            return { success: true, data: [...this.poems] };
-        } catch (error) {
-            return { success: false, error: error instanceof Error ? error : new Error(String(error)) };
-        }
+        throw new Error("TODO");
     }
 
     async getAllByPoemType(type: PoemType): Promise<Process<Poem[]>> {
-        try {
-            const filtered = this.poems.filter(poem => poem.type === type);
-            return { success: true, data: filtered };
-        } catch (error) {
-            return { success: false, error: error instanceof Error ? error : new Error(String(error)) };
-        }
+        throw new Error("TODO");
     }
 
     async clear(): Promise<Task> {
